@@ -44,6 +44,15 @@ public class MedianOfSortedArrays {
                }
            }
         }
+        int sum=0;
+        for(int p=0;p<merged.length;p++){
+            merged[p] +=sum;
+        }
+
+        if(sum==0){
+            return 0;
+        }
+
         int mid1=merged.length/2;
         if(merged.length%2 !=0){
             return merged[mid1];
