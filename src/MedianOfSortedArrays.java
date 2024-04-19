@@ -40,16 +40,21 @@ public class MedianOfSortedArrays {
                {
                    int temp=merged[m];
                    merged[m]=merged[n];
-                   merged[n]=merged[m];
+                   merged[n]=temp;
                }
            }
         }
-        int sum=0;
+        if(merged.length==1){
+            return merged[0];
+        }
+        int sum=merged.length;
         for(int p=0;p<merged.length;p++){
-            merged[p] +=sum;
+            if(merged[p]==0){
+               sum--;
+            }
         }
 
-        if(sum==0){
+        if(sum==1){
             return 0;
         }
 
@@ -58,8 +63,8 @@ public class MedianOfSortedArrays {
             return merged[mid1];
         }
         else{
-            double mid2=((merged[mid1]+merged[mid1-1])/2);
-            return(mid2+0.5);
+            double mid2=((double) (merged[mid1] + merged[mid1 - 1]) /2);
+            return(mid2);
         }
     }
 
