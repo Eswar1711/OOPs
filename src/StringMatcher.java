@@ -8,7 +8,7 @@ public class StringMatcher {
         String str2= "apple trees";
 
         if (str2.length() > str1.length()) {
-            System.out.println("Invalid input: String 2 is greater than String 1");
+            System.out.println("Invalid input: String 2 is Greater than String 1");
         } else {
             int exactMatchIndex = getLevenshteinDistance(str1, str2);
 
@@ -19,7 +19,7 @@ public class StringMatcher {
             int closestMatchIndex = getLevenshteinDistance(str1, str2);
 
             if (closestMatchIndex == -1) {
-                System.out.println("No close match found");
+                System.out.println("No Close Match found");
             }
         }
     }
