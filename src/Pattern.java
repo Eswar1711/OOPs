@@ -5,7 +5,7 @@ public class Pattern {
         Scanner sc= new Scanner(System.in);
         int r=sc.nextInt();
         int c=sc.nextInt();
-
+     // first pattern
         for(int i=0;i<r;i++){
             if(i==0 || i==r-1) {
                 System.out.print("  ");
