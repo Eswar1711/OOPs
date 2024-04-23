@@ -2,7 +2,7 @@ import java.util.HashMap;
 
 public class Frequency extends  UserSpecificLargestSmallest {
     public static void main(String[] args) {
-        int[] array = {1, 2, 3, 4, 2, 3, 1, 5, 2, 3, 4};
+        int[] array = {1, 2, 3, 4, 2, 3, 1, 1, 2, 3, 4};
         int target=1;
         System.out.println(Fre(array,target));
     }
