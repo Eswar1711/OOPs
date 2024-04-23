@@ -8,9 +8,9 @@ public class Prime {
                    count++;
                }
            }
-           if(count==1 || i == 2 ||i== 3 ||i== 5 ||i== 7){
+        /*   if(count==1 || i == 2 ||i== 3 ||i== 5 ||i== 7){
                System.out.print(i);
-           }
+           }*/
 
        }
     }
