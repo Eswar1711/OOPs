@@ -6,12 +6,13 @@ public class StringRemover {
         Scanner sc = new Scanner(System.in);
         String[] s1 = {"apple","mango","grapes","mango"};
         String[] s2={"mango"};
+        System.out.println(hash(s1,s2));
 
 
 
     }
 
-    static HashMap<String,Integer> hash(String[] s1){
+    static HashMap<String,Integer> hash(String[] s1,String[] s2){
         HashMap<String,Integer> s3=new HashMap<>();
         for (String num : s1) {
             if (!s3.containsKey(num)) {
@@ -20,14 +21,13 @@ public class StringRemover {
                 s3.put(num, s3.get(num) + 1);
             }
         }
-        return s3;
-    }
-    static String[] hash2(HashMap hash){
-        String[] removeOccurance=new String[hash.size()];
-        for(int i=0;i<hash.size();i++){
 
+        for(int i=0;i<s2.length;i++){
+            if(s3.containsKey(s2[i])){
+                s3.remove(s2[i]);
+            }
         }
-        return s;
+        return s3;
     }
 
 }
